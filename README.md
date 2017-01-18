@@ -7,13 +7,13 @@ Use [samtools faidx](http://www.htslib.org/doc/samtools.html)
 First index the fasta file
 
 ```bash
-	samtools faidx mysequences.fasta
+samtools faidx mysequences.fasta
 ```
 
 Then retrieve sequences by ID 
 
 ```bash
-	samtools faidx mysequences.fasta id1 id2 id3
+samtools faidx mysequences.fasta id1 id2 id3
 ```
 
 # Reformatting fasta records
@@ -29,5 +29,5 @@ For example to add a fasta compatible prefix like this
 can be done with the following bioawk command
 
 ```bash
-	bioawk -c fastx '{printf ">lcl|%s\n%s\n", $name, $seq}' original.fasta > reformatted.fasta
+bioawk -c fastx '{printf ">lcl|%s\n%s\n", $name, $seq}' original.fasta > reformatted.fasta
 ```
