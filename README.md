@@ -46,14 +46,14 @@ for file in *.gz; do tar -xvfz $file;done
 
 # Annotating entries in a fasta file ( not quite one line)
 
-
-1. Find homologs with blastp
-
 Assuming we have an indexed blast database built as follows
 
 ```bash
 	makeblastdb -in uniprot_sprot.fasta -input_type 'fasta' -dbtype 'prot' -parse_seqids
 ```
+
+Find homologs with blastp**
+
 
 ```bash
 	blastp -query contigs.fasta -db uniprot_sprot.fasta -outfmt '6 qseqid sacc evalue stitle' -max_target_seqs 1 > contigs.blastp
