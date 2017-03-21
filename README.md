@@ -37,3 +37,9 @@ bioawk -c fastx '{printf ">lcl|%s\n%s\n", $name, $seq}' original.fasta > reforma
 ```bash
 cat mysequences.fasta | grep ">" | wc –l
 ```
+
+# Untaring multiple files in a folder
+
+```bash
+for file in *.gz; do tar -xvfz $file;done
+```
