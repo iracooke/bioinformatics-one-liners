@@ -35,7 +35,7 @@ bioawk -c fastx '{printf ">lcl|%s\n%s\n", $name, $seq}' original.fasta > reforma
 # Counting the number of sequences in a fasta file
 
 ```bash
-cat mysequences.fasta | grep ">" | wc –l
+cat mysequences.fasta | grep -c ">"
 ```
 
 # Untaring multiple files in a folder
