@@ -16,6 +16,12 @@ Then retrieve sequences by ID
 samtools faidx mysequences.fasta id1 id2 id3
 ```
 
+If you have a file with lots of ID's or you have some other command (eg awk) that produces IDs with one on each line you can use `xargs` to pass these IDs to `samtools faidx`.  For example if all the IDs are in a file;
+
+```bash
+cat ids.txt | xargs samtools faidx mysequences.fasta
+```
+
 # Reformatting fasta records
 
 A great tool for this is **[bioawk](https://github.com/lh3/bioawk)** .  
